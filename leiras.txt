@@ -1,0 +1,107 @@
+A témák közül ki kell választani a trust témát és a témában lévő template lapok segítségével fel lehet építeni az oldalt.
+Létre kell hozni továbbá post és link kategóriákat, illetve aloldalakat.
+A meglévő sablonok segítségével további menü / tartalmi elemekkel is bővíthető az oldal.
+
+A settings oldalon be kell állítani, hogy a kezdőlap a Home (welcome.php) templatere épülő oldal legyen.
+Kommentek és pingbackek kikapcsolhatók mivel a téma nem támogat ilyen opciókat.
+A permalink támogatás bekapcsolandó a "szép" linkek miatt.
+  pl.: /%day%/%monthnum%/%year%/%postname%/
+
+Alap esetben a kép az oldalon a wordpress gyökérkönyvtárában a random mappában lévő képekből kerül ki véletlenszerűen.
+
+A főmenüben megjelenik az a page típusú bejegyzés amelyiknek van `menu` nevű meta kulcsa és az értéke `main`. (lista a page order alapján (magasabb = előrébb))
+ - a főmenüben lévő linkek nevének megadásához, a page meta kulcsokhoz meg kell adni a `title` nevű kulcsot és az értéke lesz a link szövege
+A `picture` meta kulcs megadásával fixálható a képe az adott oldalnak (a teljes kép elérése megadandó)
+
+menu, title, picture - mindenütt használható
+
+
+EGYÉB META OPCIÓK:
+Home - welcome.php
+  Cím és szöveg a bal oldali dobozhoz kerül.
+    box1_slug - közébső doboz, egy kategória slug neve amiből listázzon (legutóbbival kezdve)
+    box1_title - középső doboz címe, ha nincs, a slug alapján kinyert kategória címe lesz
+    box1_limit - hány cikket vegyen ki a kategóriából (-1 = végtelen)
+
+    box2_slug - közébső doboz, egy link kategória slug neve amiből listázzon (link rang alapján)
+    box2_title - középső doboz címe, ha nincs, a slug alapján kinyert link kategória címe lesz
+    box2_limit - hány linket vegyen ki a kategóriából (-1 = végtelen)
+      (a linkek neve lesz a kettőspont előtt, és a leírás lesz a link; ha van kép, akkor a kép és a leírás a link)
+
+    holiday - kulonleges alkalmakkor használatos kép / szöveg
+      (a meta érték első sora: mettől-meddig azaz nap.honap.ev-nap.honap.ev pl.: 06.12.2008-31.12.2008)
+      (a meta érték második sora: kép amire lecserélje az alapot főléhúzásra; kép teljes elérése)
+      (a meta érték további sorai: szöveg ami megjelenjen a bal oldali szöveg alatt ha az egeret a kép fölé húzzák)
+
+About - about.php
+  Cím és szöveg a bal oldali dobozhoz kerül.
+    box1_slug - közébső doboz, egy link kategória slug neve amiből listázzon (link rang alapján)
+    box1_title - középső doboz címe, ha nincs, a slug alapján kinyert link kategória címe lesz
+    box1_limit - hány linket vegyen ki a kategóriából (-1 = végtelen)
+      (a link felvitelénél (ha nem kell hogy rendes linkként működjön) elfogadáshoz megkell adni legalább hogy: `http://`)
+
+    box2_title - jobb felső doboz címe (lista a page order alapján (magasabb = feljebb))
+      (az about.php sablont használó lap aloldalainak listája)
+
+    box3_title - jobb alsó doboz címe
+    box3_text - jobb alsó dobozban lévő szöveg
+
+Profile - profile.php
+  Cím és szöveg a bal oldali dobozhoz kerül.
+    box1_title - középső doboz címe
+    box1_text - középső dobozban lévő szöveg
+
+    box2_title - jobb oldali doboz címe (lista a page order alapján (magasabb = feljebb))
+      (azonos szülőlappal rendelkező lapok listája)
+
+Services - services.php
+  Cím és szöveg a bal oldali dobozhoz kerül. Alá, a jobbra lévő dobozokhoz tartozó tartalom kerül egér föléhúzásra.
+    box1_slug - közébső doboz, egy kategória slug neve amiből listázzon (legutóbbival kezdve)
+    box1_title - középső doboz címe, ha nincs, a slug alapján kinyert kategória címe lesz
+    box1_limit - hány cikket vegyen ki a kategóriából (-1 = végtelen)
+
+    box2_slug - jobb oldali doboz, egy kategória slug neve amiből listázzon (legutóbbival kezdve)
+    box2_title - jobb oldali címe, ha nincs, a slug alapján kinyert kategória címe lesz
+    box2_limit - hány cikket vegyen ki a kategóriából (-1 = végtelen)
+
+News - index.php
+  Cím és szöveg nem jelenik meg az oldalon. Cím megadása kötelező.
+    box1_slug - bal oldali doboz, egy kategória slug neve amiből listázza a cikkeket jobb oldalon (legutóbbival kezdve) és a legutóbbit megjelenítse bal oldalon
+    box1_title - bal oldali doboz címe (felette)
+      (a megadott kategóriában fog keresni is, és a bal oldalon található cikk linkje lesz elküldve emailben, illetve a nyomtatóbarát verzió a bal oldali doboz tartalmából készül)
+
+    box2_title - jobb oldali doboz címe (felül)
+
+Contact - contact.php
+  Cím és szöveg a bal oldali dobozhoz kerül.
+    maps_link - google maps által kreált beilleszthető kódból a link!
+      (beszerzéshez: maps.google.com -> kívánt cím keresése -> térkép jobb felső sarkában Link -> Beágyazott térkép testreszbása és előnézete ->
+       az iframe HTML tagen belül a szövegdobozban az src= után, az idézőjelek között lévő hosszú link)
+      (a google maps link bal alsó sarkán történő kattintás átdob a google maps oldalára, ugyanezzel a térkép pozícióval)
+
+    form_title - középső doboz címe
+    form_email - valós emailcím, ahova az üzenet menjen
+    form_subject - az üzenet tárgya
+    form_inputs - soronként a beviteli mezők meghatározásai
+      (beviteli mezők meghatározásának módja: első elem a típus - text / textarea / hidden / checkbox / select
+       vonal elválasztó (AltGR + W) (select esetén a vonal előtt kettőspontokkal kezdve és elválasztva a választható opciók)
+       a következő elem a beviteli mező neve és a sor utolsó karaktere csillag legyen ha a mező megadása kötelező
+       pl.:
+          text|Name: *
+          text|Email: *
+          text|Phone:
+          hidden|Sent from trustcomms.com/hu
+          textarea|Message: *
+          text|Name: *
+          select:Meeting:Help:Extra info:|Subject: 
+          checkbox|Please call me! 
+          checkbox|I agree to get newsletter. *
+      az email, a bekért adatok és azok neve alapján lesz összeállítva, majd elküldve a form_mail címre)
+
+    box1_title - jobb oldali doboz címe
+    box1_text - jobb oldali dobozban lévő szöveg
+
+
+
+www.onethreestudio.com
+info @ onethreestudio.com

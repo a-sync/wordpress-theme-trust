@@ -1,0 +1,436 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+Theme Name: trust
+Theme URI: 
+Description: Trust site theme modules
+             
+Version: 1.0.0
+Author: One Three Studio
+Author URI: www.onethreestudio.com
+Created : 2008.12.16.
+- - - - - - - - - - - - - - - - - - - - - */
+/*
+color: #000000; (black)
+link-hover: #cc0000; (red)
+link: #969696; (gray)
+border: #c0c0c0; (gray)
+think-text: #008000; (green)
+*/
+/* ----- GLOBAL ----- */
+html, body {
+color: #000000;
+font-size: 10pt;
+font-family: Corbel, Verdana, Arial, serif;
+background-color: #FFFFFF;
+text-align: center;
+margin: 0;
+padding: 0;
+}
+
+#container {
+text-align: left;
+width: 842px;
+
+background-image: url("images/trustlogo.jpg");
+background-repeat: no-repeat;
+background-position: top left;
+
+margin: 0 auto 10px auto;
+padding: 0;
+}
+
+/* ----- HYPERLINKS ----- */
+a:link, a:visited {
+color: #969696;
+text-decoration: none;
+}
+a:hover {
+color: #cc0000;
+text-decoration: none;
+}
+
+#menu span a:link, #menu span a:visited {
+color: #969696;
+}
+#menu span a:hover {
+color: #cc0000;
+}
+.active:link {
+color: #cc0000;
+}
+
+/* ----- INPUTS ----- */
+input, textarea, select {
+font-size: 10pt;
+font-family: Corbel, Verdana, Arial, serif;
+border: 1px solid #c0c0c0;
+}
+
+/* ----- IMAGES ----- */
+img, a img {
+border: none;
+margin: 0;
+padding: 0;
+}
+
+/* ----- TOP ----- */
+#headline {
+height: 15px;
+
+text-align: right;
+font-size: 8px;
+
+margin: 0;
+padding: 5px 0 0 0;
+}
+
+#menu {
+height: 30px;
+
+text-align: left;
+
+margin: 0;
+padding: 25px 0 0 250px;
+}
+
+#menu span {
+margin-right: 25px;
+}
+
+#picture {
+height: auto;
+
+overflow: hidden;
+
+margin: 0;
+padding: 0;
+}
+
+#picture img {
+
+border: 0;
+margin: 0;
+padding: 0;
+}
+
+#maps {
+height: auto;
+
+overflow: hidden;
+
+margin: 0;
+padding: 0;
+}
+
+/* ----- CONTENT ----- */
+#content {
+float: left;
+
+margin: 0;
+padding: 5px 0 0 0;
+}
+
+.page {
+float: left;
+width: 370px;
+
+margin: 0;
+padding: 0 0 10px 0;
+}
+
+.page h1 {
+font-size: 26px;
+margin: 0 0 10px 0;
+padding: 0;
+}
+
+.page p {
+margin: 0 0 6px 0;
+padding: 0;
+}
+
+.box {
+float: left;
+width: 215px;
+
+line-height: 13pt;
+overflow: hidden;
+
+margin: 0 0 0 20px;
+padding: 0 0 10px 0;
+}
+
+.box h2 {
+text-transform: uppercase;
+font-size: 10pt;
+
+border-bottom: 1px solid #c0c0c0;
+margin: 0 0 8px 0;
+padding: 25px 0 0 0;
+}
+
+.box h3 {
+text-transform: uppercase;
+font-size: 10pt;
+
+border-bottom: 1px solid #c0c0c0;
+margin: 0 0 8px 0;
+padding: 0;
+}
+
+.box div p {
+margin: 0 0 6px 0;
+padding: 0;
+}
+
+.boxnest {
+float: left;
+width: 215px;
+margin: 0 0 0 20px;
+}
+
+.boxnest .box {
+width: 215px;
+margin: 0;
+}
+
+.boxlink a img {
+border: none;
+margin: 5px 10px 0 0;
+padding: 0;
+float: left;
+}
+
+.boxlink {
+float: left;
+width: 215px;
+}
+
+.formbox {
+float: left;
+width: 215px;
+
+line-height: 13pt;
+overflow: hidden;
+
+margin: 0 20px 0 0;
+padding: 0 0 10px 0;
+}
+
+.formbox h2 {
+text-transform: uppercase;
+font-size: 10pt;
+
+border-bottom: 1px solid #c0c0c0;
+margin: 0 0 8px 0;
+padding: 25px 0 0 0;
+}
+
+/* ----- NEWS CONTENT ----- */
+#news-content {
+width: 842px;
+float: left;
+border-top: 1px solid #c0c0c0;
+margin: 0;
+padding: 20px 0 0 0;
+}
+
+.news_boxes {
+float: left;
+border-bottom: 1px solid #c0c0c0;
+}
+
+
+.news_box_left {
+float: left;
+width: 421px;
+}
+.news_box_right {
+float: left;
+width: 421px;
+}
+
+
+.news_box_left_title {
+height: 25px;
+border-bottom: 1px solid #c0c0c0;
+}
+.news_box_right_title {
+height: 20px;
+font-weight: bold;
+text-transform: uppercase;
+border-bottom: 1px solid #c0c0c0;
+padding: 0;
+margin: 5px 0 0 25px;
+}
+
+
+.news_box_left_content {
+width: 405px;
+height: 385px;
+overflow: auto;
+
+background-color: #fae4e6;
+
+margin: 5px 0 0 0;
+padding: 5px 5px 5px 10px;
+}
+.news_box_right_content {
+width: 395px;
+height: 375px;
+overflow: auto;
+line-height: 10pt;
+
+margin: 5px 0 0 0;
+padding: 20px 0 0 25px;
+}
+
+.news_box_left_content h1.news_content_title {
+font-size: 17pt;
+margin: 0 0 20px 0;
+}
+
+.news_box_right_content i {
+font-size: 10pt;
+}
+
+.news_page {
+float: left;
+padding: 15px 0 0 0;
+margin: 0;
+}
+
+.news_page_download {
+width: 420px;
+float: left;
+}
+.news_page_download a {
+margin-right: 25px;
+}
+
+.news_page_search {
+width: 420px;
+float: left;
+text-align: right;
+}
+
+#meta_form-0 {
+float: left;
+width: 380px;
+
+margin: 0;
+padding: 15px 0 0 0;
+}
+
+.news_page_think {
+float: left;
+width: 425px;
+
+font-size: 10pt;
+font-weight: bold;
+color: #008000;
+text-align: right;
+
+background-image: url("images/tree.jpg");
+background-repeat: no-repeat;
+background-position: bottom right;
+
+margin: 0 0 5px 0;
+padding: 20px 35px 0 0;
+}
+
+#searchform {
+border: none;
+margin: 0;
+padding: 0;
+}
+
+#search_submit {
+cursor: pointer;
+color: #969696;
+background-color: transparent;
+border: none;
+margin: 0;
+padding: 0;
+}
+#search_submit:hover {
+color: #cc0000;
+}
+
+#s {
+width: 320px;
+height: 18px;
+margin: 0;
+padding: 0;
+}
+
+/* ----- BOTTOM ----- */
+#footline {
+clear: both;
+height: auto;
+border-top: 1px solid #c0c0c0;
+margin: 0;
+padding: 5px 0 0 0;
+}
+
+.quickpost {
+width: 370px;
+color: #cc0000;
+background-color: #ffffff;
+
+visibility: hidden;
+position: absolute;
+padding: 0;
+}
+
+
+/* ----- FORM ----- */
+.meta_form {
+float: left;
+width: 215px;
+
+font-size: 10pt;
+font-family: Corbel, Verdana, Arial, serif;
+
+margin: 0;
+padding: 0;
+}
+
+.error {
+color: #cc0000;
+}
+
+.success {
+color: #008000;
+}
+
+.meta_form_line {
+width: 215px;
+padding: 0;
+margin: 0 0 4px 0;
+}
+
+.meta_form_text {
+width: 200px;
+margin: 0;
+padding: 0;
+}
+
+.meta_form_checkbox {
+border: none;
+margin: 0;
+padding: 0;
+}
+
+.meta_form_select {
+width: 200px;
+margin: 0;
+padding: 0;
+}
+
+.meta_form_textarea {
+width: 200px;
+
+margin: 0;
+padding: 0;
+}
+
